@@ -172,7 +172,7 @@ export class StartAction extends BuildAction {
     const processArgs = [outputFilePath, ...childProcessArgs];
     if (debug) {
       const inspectFlag =
-        typeof debug === 'string' ? `--inspect=${debug}` : '--inspect';
+        typeof debug === 'string' ? `--inspect-brk=${debug}` : '--inspect';
       processArgs.unshift(inspectFlag);
     }
     processArgs.unshift('--enable-source-maps');
